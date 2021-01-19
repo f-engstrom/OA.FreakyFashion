@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FreakyFashion</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-row">
+            <div class="logo">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <p>FreakyFashion</p>
+                </a>
+            </div>
+            <div>
+                <input type="search" placeholder="sök produkt.." name="search" id="search">
+                <img src="https://image.flaticon.com/icons/svg/751/751463.svg" alt="">
+            </div>
+            <div>
+                <select name="language" id="language">
+                    <option value="svenska">Svenska</option>
+                    <option value="spanska">Spanska</option>
+                    <option value="ryska">Ryska</option>
+                </select>
+                <a class="level-one-link" asp-area="" asp-controller="Admin" asp-action="Index">
+                    <img class="icon" src="https://image.flaticon.com/icons/svg/1556/1556324.svg" alt="">
+                </a>
+                <img class="icon" src="https://via.placeholder.com/40x40" alt="">
+                <img class="icon" src="https://image.flaticon.com/icons/svg/126/126510.svg" alt="">
+
+            </div>
+        </div>
+        <div class="header-row">
+            <nav>
+                <ul>
+                    <li><a href="#1" class="level-one-link">Nyheter</a></li>
+                    <li>
+                        <a class="level-one-link" asp-area="" asp-controller="Categories" asp-action="Index">Kategorier</a>
+                        <ul class="dropdown">
+                            <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="1">Skor</a></li>
+                            <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="2">Tröjor</a></li>
+                            <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="3">Byxor</a></li>
+                            <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="4">Vinterjackor</a></li>
+                            <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="5">Pufferjackor</a></li>
+                            <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="6">Kappor</a></li>
+                            <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="7">Trenchcoats</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#3" class="level-one-link">Topplistan</a></li>
+                    <a class="level-one-link" asp-area="" asp-controller="Clothings" asp-action="Index">Rea</a>
+                    <li><a href="#5" class="level-one-link">Kampanjer</a></li>
+                    <li><a href="#6" class="level-one-link">Varumärken</a></li>
+                    <li><a href="#7" class="level-one-link">Shop</a></li>
+                    <li><a href="#8" class="level-one-link">Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="main-footer">
+
+        <main>
+
+
+            @RenderBody()
+
+        </main>
+
+        <footer>
+            <div>
+                <span>
+                    Shopping
+                </span>
+
+                <ul>
+                    <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="1">Skor</a></li>
+                    <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="2">Tröjor</a></li>
+                    <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="3">Byxor</a></li>
+                    <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="4">Vinterjackor</a></li>
+                    <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="5">Pufferjackor</a></li>
+                    <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="6">Kappor</a></li>
+                    <li><a asp-area="" asp-controller="Categories" asp-action="Details" asp-route-id="7">Trenchcoats</a></li>
+
+                </ul>
+            </div>
+            <div>
+                <span>
+                    Mina Sidor
+                </span>
+
+                <ul>
+                    <li><a href="#1">Mina Ordrar</a></li>
+                    <li><a href="#2">Mitt Konto</a></li>
+
+                </ul>
+            </div>
+            <div>
+                <span>
+                    Kundtjänst
+                </span>
+
+                <ul>
+                    <li><a href="#1">Returpolicy</a></li>
+                    <li><a href="#2">Integritetspolicy</a></li>
+
+                </ul>
+            </div>
+
+            <div class="language-region">
+                <span>
+                    Välj land och språk
+                </span>
+                <label for="country">
+                    Land
+                    <select name="country" id="country">
+                        <option value="svenska">Sverige</option>
+                        <option value="spanska">Spanien</option>
+                        <option value="ryska">Ryssland</option>
+                    </select>
+                </label>
+
+                <label for="language">
+                    Språk
+                    <select name="language" id="language">
+                        <option value="svenska">Svenska</option>
+                        <option value="spanska">Spanska</option>
+                        <option value="ryska">Ryska</option>
+                    </select>
+                </label>
+            </div>
+        </footer>
+
+        <p style="text-align: center;">Copyright 2019 FreakyFashion</p>
+
+    </div>
+</body>
+
+</html>
+

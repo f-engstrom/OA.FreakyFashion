@@ -1,0 +1,3 @@
+C:\Users\Frans\Dropbox\Projects\ASP .Net Core\OA.FreakyFashion\Service\obj\Debug\netcoreapp3.0\FreakyFashion.Service.csprojAssemblyReference.cache
+C:\Users\Frans\Dropbox\Projects\ASP .Net Core\OA.FreakyFashion\Service\obj\Debug\netcoreapp3.0\FreakyFashion.Service.AssemblyInfoInputs.cache
+C:\Users\Frans\Dropbox\Projects\ASP .Net Core\OA.FreakyFashion\Service\obj\Debug\netcoreapp3.0\FreakyFashion.Service.AssemblyInfo.cs

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100vh;
+            /* can also use viewport units (height: 100vh) */
+        }
+
+        body {
+            display: flex;
+            /* displays flex-items (children) inline */
+            flex-direction: column;
+            /* stacks them vertically */
+            height: 100vh;
+            /* needs to take the parents height, alternative: body {display: flex} */
+        }
+
+        .site-header {
+            display: flex;
+            flex-direction: column;
+            background-color: greenyellow;
+            background: repeating-linear-gradient(180deg, greenyellow 0px, chartreuse 40px, greenyellow 40px, chartreuse 80px);
+        }
+
+
+
+        .site-header .logo {
+            /*width: 200px;
+    height: 100px;*/
+            background: repeating-linear-gradient(45deg, purple 0px, chartreuse 40px, purple 40px, chartreuse 80px);
+            display: flex;
+            margin: 20px 0px 20px 20px;
+        }
+
+        .site-header .logo p {
+            display: flex;
+            justify-content: center;
+            color: rgb(204, 3, 204);
+            font-size: 2em;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+
+
+        .site-header div {
+            display: flex;
+        }
+
+        .site-header div:nth-child(2) {
+            margin: auto 0;
+        }
+
+        .site-header div:nth-child(3) {
+            margin: 0 0 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 20em;
+        }
+
+        .site-header nav {
+            flex-direction: row;
+            display: flex;
+            flex: auto;
+            align-content: stretch;
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+
+
+        .header-row nav>ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+
+
+        }
+
+        .site-header nav li {
+
+            padding: 0.5em;
+
+        }
+
+        /* .site-header nav li:hover {
+
+            background-color: #60f900;
+            font-weight: bold;
+
+        } */
+
+
+
+        .site-header nav .dropdown {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+        }
+
+        .site-header nav .dropdown:hover {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        ul li ul li {
+            clear: both;
+            width: 100%;
+        }
+
+        .header-row a {
+            padding: 0.3em;
+        }
+
+
+
+        main {
+            flex: 1;
+            /* takes the remaining height of the "container" div */
+            overflow: auto;
+            /* to scroll just the "main" div */
+        }
+
+        section {
+            height: 100vh;
+            /* takes the visible area of the "main" div */
+            overflow: auto;
+            /* recommended */
+            border-bottom: 1px solid;
+            background: lightgreen;
+        }
+
+
+
+        section:last-child {
+            border: none
+        }
+
+        footer {
+            background: lightblue
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-row">
+            <div class="logo">
+                <p>FreakyFashion</p>
+            </div>
+            <div>
+                <input type="search" placeholder="sök produkt.." name="search" id="search">
+            </div>
+            <div>
+                <select name="language" id="language">
+                    <option value="svenska">Svenska</option>
+                    <option value="spanska">Spanska</option>
+                    <option value="ryska">Ryska</option>
+                </select>
+                <img src="https://via.placeholder.com/40x40" alt="">
+                <img src="https://via.placeholder.com/40x40" alt="">
+                <img src="https://via.placeholder.com/40x40" alt="">
+
+            </div>
+        </div>
+        <div class="header-row">
+            <nav>
+                <ul>
+                    <li><a href="#1">Nyheter</a></li>
+                    <li><a href="#2">Kategorier</a></li>
+                    <ul class="dropdown">
+                        <li><a href="#">Sub-1</a></li>
+                        <li><a href="#">Sub-2</a></li>
+                        <li><a href="#">Sub-3</a></li>
+                    </ul>
+                    <li><a href="#3">Topplistan</a></li>
+                    <li><a href="#4">Rea</a></li>
+                    <li><a href="#5">Kampanjer</a></li>
+                    <li><a href="#6">Varumärken</a></li>
+                    <li><a href="#7">Shop</a></li>
+                    <li><a href="#8">Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>1st<img src="https://via.placeholder.com/1024x700" alt=""></section>
+
+        <section>
+            <div class="hero">
+                <div>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate quaerat excepturi quis
+                        tempora
+                        veritatis
+                        odio sunt obcaecati! In sit magni blanditiis illum facilis veritatis, aliquam quam similique
+                        soluta vel
+                        commodi?
+                    </p>
+                    <button>CTA</button>
+                </div>
+
+                <img src="https://via.placeholder.com/1024x700" alt="">
+
+            </div>
+        </section>
+        <section>3rd<br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit
+            anim id est laborum.<br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit
+            anim id est laborum.<br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+            fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit
+            anim id est laborum.<br>
+        </section>
+        <section>4th</section>
+        <section>5th</section>
+    </main>
+    <footer>bottom</footer>
+</body>
+
+</html>

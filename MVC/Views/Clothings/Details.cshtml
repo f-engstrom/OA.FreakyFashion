@@ -1,0 +1,25 @@
+﻿@model FreakyFashion.Models.Clothing
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<section class="clothing-details">
+
+
+    <img src="@Html.DisplayFor(model => model.ImageUrl)" />
+    <div>
+        <h2>@Html.DisplayFor(model => model.Name)</h2>
+        <p> @Html.DisplayFor(model => model.Description)</p>
+        <p>  @Html.DisplayFor(model => model.Price) SEK</p>
+        <p>
+            @Html.DisplayNameFor(model => model.ClimateCompensated)
+            @Html.DisplayFor(model => model.ClimateCompensated)
+        </p>
+
+    </div>
+
+
+
+
+</section>

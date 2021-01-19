@@ -1,0 +1,5 @@
+C:\Users\Frans\Dropbox\Projects\ASP .Net Core\OA.FreakyFashion\FreakyFashion.Infrastructure\bin\Debug\netcoreapp3.0\FreakyFashion.Repo.deps.json
+C:\Users\Frans\Dropbox\Projects\ASP .Net Core\OA.FreakyFashion\FreakyFashion.Infrastructure\bin\Debug\netcoreapp3.0\FreakyFashion.Repo.dll
+C:\Users\Frans\Dropbox\Projects\ASP .Net Core\OA.FreakyFashion\FreakyFashion.Infrastructure\obj\Debug\netcoreapp3.0\FreakyFashion.Repo.csprojAssemblyReference.cache
+C:\Users\Frans\Dropbox\Projects\ASP .Net Core\OA.FreakyFashion\FreakyFashion.Infrastructure\obj\Debug\netcoreapp3.0\FreakyFashion.Repo.AssemblyInfoInputs.cache
+C:\Users\Frans\Dropbox\Projects\ASP .Net Core\OA.FreakyFashion\FreakyFashion.Infrastructure\obj\Debug\netcoreapp3.0\FreakyFashion.Repo.AssemblyInfo.cs
